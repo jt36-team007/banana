@@ -1,0 +1,23 @@
+.list{
+    text-decoration: none;
+    text-align: center;
+}
+.list>li{
+    display: inline-block;
+    width: 120px;
+    border-radius: 5px;
+}
+.checked{
+    background-color: #0ea6df;
+    color: red;
+}
+.radius{
+    background-color: #f6f6f6;
+    border: 1px wheat solid;
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+}
+nav>ul>li:first-child~li,nav>ul~ul{
+    display: none;
+}

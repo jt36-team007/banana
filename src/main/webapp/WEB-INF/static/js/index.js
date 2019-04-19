@@ -6,3 +6,7 @@
 $(document).ready(function(){
     $("li:even").css({"background-color":"#F0F0F0"});
 });
+
+$(function(){
+    $("#content>ul>span").html("")
+})

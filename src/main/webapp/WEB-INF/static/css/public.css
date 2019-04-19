@@ -10,6 +10,7 @@ ul{
 .box{
     width:100%;
     height:auto;
+    clear: both;
 }
 #header{
     width:100%;
@@ -257,7 +258,7 @@ ul{
     text-align: center;
 }
 #belowNav_box{
-    width:100%
+    width:100%;
    height:40px;
     margin-top: 30px;
     background:#333;

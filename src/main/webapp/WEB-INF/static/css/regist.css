@@ -1,0 +1,28 @@
+
+#regist1_box{
+	width: 100%;
+}
+#regist1{
+	margin: 0 auto;
+	width:1226px;
+	height: 800px;
+}
+#logPic{
+    float: left;
+    margin-top: 100px;
+}
+#registForm{
+	float: left;
+    font-size: 24px;
+    margin-top: 100px;
+	line-height: 50px;
+}
+#registForm input{
+    font-size: 24px;
+}
+#userLaw{
+	border: 1px solid #333333;
+	width:850px;
+	height:300px;
+	font-size: 20px;
+}

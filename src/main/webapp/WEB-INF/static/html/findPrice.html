@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>唯群网--查价</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/findPrice.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script charset="gb2312" type="text/javascript" src="js/public.js"></script>
+    <script charset="gb2312" type="text/javascript" src="js/findPrice.js"></script>
+ </head>
+
+<body>
+
+    <div id="header">
+        <div id="head">
+            <div id="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div id="uname" onclick="company()">深圳市模板电子科技有限公司</div>
+            <a id="admin" onclick="admin()">后台管理</a>
+            <a id="logon" onclick="logon()">登陆</a>
+            <a id="regist" onclick="regist()">注册</a>
+            <a id="userInfo" onclick="userInfo()">用户信息</a>
+        </div>
+    </div>
+    <div id="naver">
+        <div id="nav">
+            <a class="nav1" onclick="index()">首页</a>
+            <a class="nav1" onclick="findPrice()">查价</a>
+            <a class="nav1" onclick="rfq()">询价</a>
+            <a class="nav1" onclick="quote()">报价</a>
+            <a class="nav1" onclick="vendor()">供应商</a>
+            <a class="nav1" onclick="BOM()">BOM</a>
+        </div>
+    </div>
+
+    <div id="banner_box">
+        <img id="banner" src="images/banner.jpg" alt="">
+    </div>
+    <div class="box">
+        <div id="search">
+            <form  id="qltyForm" action="">
+                <select  id="ptypeList" >
+                    <option value="I集成电路" selected="selected">I 集成电路</option>
+                    <option value="T三极管">T 三极管</option>
+                    <option value="D二极管">D 二极管</option>
+                    <option value="C电容">C 电容</option>
+                </select>
+                <input type="text" id="pnInput" placeholder="请输入查询型号"/>
+                <button id="searchBtn" value="搜索">查询报价</button>
+            </form>
+        </div>
+    </div>
+
+ <div class="box">
+     <div id="newQuote">
+         <span>最新报价</span>
+     </div>
+ </div>
+
+<div class="box">
+    <div id="quoteList">
+       	<div class="headline">
+            <span class="noL">询 价 单 号</span>
+            <span class="companyL">公 司 名 称</span>
+            <span class="pnL">规 格 型 号</span>
+            <span class="qltyL">品质要求</span>
+            <span class="dtcdL" >批次</span>
+            <span class="qtyL">数量</span>
+            <span class="priceL">价格</span>
+            <span class="dtimeL">货期</span>
+        </div>
+        <ul>
+        	<li>
+            	<span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+            <li>
+                <span class="noL">I8090600001</span>
+                <span class="companyL">深圳市模板测试电子有限公司</span>
+                <span class="pnL">STM8S903K3T6CTR</span>
+                <span class="qltyL">原装正品</span>
+                <span class="dtcdL" >2018+</span>
+                <span class="qtyL">56850</span>
+                <span class="priceL">102.56</span>
+                <span class="dtimeL">深圳现货</span>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+        <div class="box">
+            <div id="stkHead">
+                <span>推荐货源</span>
+            </div>
+    </div>
+        <div class="box">
+        <div id="hotStk">
+            <div class="headline">
+                <span class="companyL">公 司 名 称</span>
+                <span class="pnL">规 格 型 号</span>
+                <span class="qltyL">品质要求</span>
+                <span class="dtcdL" >批次</span>
+                <span class="qtyL">数量</span>
+                <span class="priceL">价格</span>
+                <span class="dtimeL">货期</span>
+            </div>
+            <ul>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+          <li>
+              <span class="companyL">深圳市模板测试电子有限公司</span>
+              <span class="pnL">STM8S903K3T6CTR</span>
+              <span class="qltyL">原装正品</span>
+              <span class="dtcdL" >2018+</span>
+              <span class="qtyL">56850</span>
+              <span class="priceL">102.56</span>
+              <span class="dtimeL">深圳现货</span>
+          </li>
+        </ul>
+    </div>
+
+
+
+    <div id="pageCount">
+    	<span>首页</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>末页</span>
+    </div>
+</div>
+
+    <div id="belowNav_box">
+        <div id="belowNav">
+            <a onclick="platInfo()">用户指南</a>
+            <a onclick="platInfo()">操作流程</a>
+            <a onclick="platInfo()">免责声明</a>
+            <a onclick="platInfo()">关于我们</a>
+            <a onclick="platInfo()">联系我们</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div id="vr">
+            <span>版权所有：深圳市大唯科技有限公司</span>
+            <span>备案号：©唯群网 粤ICP备17005480号-2</span>
+        </div>
+    </div>
+</body>
+</html>

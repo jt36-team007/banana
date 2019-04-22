@@ -3,10 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>唯群网--首页</title>
-    <link rel="stylesheet" href="../css/public.css"  type="text/css"   />
-    <link  href="../css/index.css"  type="text/css"  rel="stylesheet"  />
-    <script src="../js/jquery-3.2.1.js"></script>
-    <script  type="text/javascript" src="../js/public.js"></script>
+    <link rel="stylesheet" href="css/public.css"  type="text/css"   />
+    <link  href="css/index.css"  type="text/css"  rel="stylesheet"  />
+    <script src="js/jquery-3.2.1.js"></script>
+    <script  type="text/javascript" src="js/public.js"></script>
+    <script  type="text/javascript" src="js/index.js"></script>
 
 </head>
 
@@ -14,7 +15,7 @@
     <div id="header">
         <div id="head">
             <div id="logo">
-                <img src="../images/logo.png" alt="">
+                <img src="images/logo.png" alt="">
             </div>
             <div id="uname" onclick="company()">深圳市模板电子科技有限公司</div>
             <a id="admin" onclick="admin()">后台管理</a>
@@ -36,7 +37,7 @@
 
 <div id="banner">
     <div id="img">
-        <img src="../images/banner.jpg" alt="">
+        <img src="images/banner.jpg" alt="">
     </div>
 
 </div>
@@ -44,254 +45,261 @@
     <div id="search">
 
         <form  id="form">
-            <select  id="ptypeList" >
-                <option value="I集成电路" selected="selected">I 集成电路</option>
-                <option value="T三极管">T 三极管</option>
-                <option value="D二极管">D 二极管</option>
-                <option value="C电容">C 电容</option>
-            </select>
-            <input type="search" id="pnInput"  placeholder="请输入查询型号"/>
-            <button id="searchBtn" value="搜索">搜索询价</button>
+            <table>
+                <tr>
+                    <td>
+                        <select  id="ptypeList" >
+                            <option value="I集成电路" selected="selected">I 集成电路</option>
+                            <option value="T三极管">T 三极管</option>
+                            <option value="D二极管">D 二极管</option>
+                            <option value="C电容">C 电容</option>
+                        </select>
+                    </td>
+                    <td><input type="search" id="pnInput"  placeholder="请输入查询型号"/></td>
+                    <td><input id="searchBtn" type="submit" value="搜索"/></td>
+                </tr>
+            </table>
         </form>
     </div>
 </div>
 
 <div class="box">
     <div id="content">
-        <ul>
-            <li>
-                <span class="noL">询价单号</span>
-                <span class="companyL">公 司 名 称</span>
-                <span class="pnL">规格型号</span>
-                <span class="qltyL" >品质要求</span>
-                <span class="dtcdL">批次</span>
-                <span class="qtyL">数量</span>
-                <span class="priceL">价格</span>
-                <span class="dtimeL">交期</span>
-            </li>
-            <span>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-                <li>
-                    <a class="noL">I890600001</a>
-                    <a class="companyL">深圳市模板电子科技有限公司</a>
-                    <a class="pnL">STM8S003F3P6TR</a>
-                    <span class="qltyL" >原装正品</span>
-                    <span class="dtcdL">1830+</span>
-                    <span class="qtyL">500000</span>
-                    <span class="priceL">11.2563</span>
-                    <span class="dtimeL">深圳现货</span>
-                    <button  class="button" onclick="quote()">报价</button>
-                </li>
-            </span>
-        </ul>
+        <form action="">
+            <table cellspacing="10px">
+                <tr>
+                    <td >询价单号</td>
+                    <td >公 司 名 称</td>
+                    <td >规格型号</td>
+                    <td  >品质要求</td>
+                    <td >批次</td>
+                    <td >数量</td>
+                    <td >价格</td>
+                    <td >交期</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+                <tr>
+                    <td >I890600001</td>
+                    <td >深圳市模板电子科技有限公司</td>
+                    <td >STM8S003F3P6TR</td>
+                    <td >原装正品</td>
+                    <td >1830+</td>
+                    <td >500000</td>
+                    <td >11.2563</td>
+                    <td >深圳现货</td>
+                    <td  onclick="quote()">报价</td>
+                </tr>
+            </table>
+        </form>
     </div>
 </div>
 
@@ -328,6 +336,5 @@
         <span>备案号：©唯群网 粤ICP备17005480号-2</span>
     </div>
 </div>
-    <script  type="text/javascript" src="../js/index.js"></script>
 </body>
 </html>

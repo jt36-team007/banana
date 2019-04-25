@@ -10,3 +10,6 @@ $(document).ready(function(){
 $(function(){
     $("#content>ul>span").html("")
 })
+function inMfg(rfqno) {
+    window.location.href=getRootPath()+"/inMfg/"+rfqno;
+}

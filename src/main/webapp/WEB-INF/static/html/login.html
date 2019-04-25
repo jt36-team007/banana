@@ -2,11 +2,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>唯群网--登录</title>
-    <link rel="stylesheet" href="css/public.css">
-    <link rel="stylesheet" href="css/logon.css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script charset="gb2312" type="text/javascript" src="js/public.js"></script>
-    <script charset="gb2312" type="text/javascript" src="js/logon.js"></script>
+    <link rel="stylesheet" href="/static/css/public.css">
+    <link rel="stylesheet" href="/static/css/logon.css">
+    <script src="/static/js/jquery-3.2.1.js"></script>
+    <script charset="gb2312" type="text/javascript" src="/static/js/public.js"></script>
+    <script charset="gb2312" type="text/javascript" src="/static/js/logon.js"></script>
  </head>
 
 <body>
@@ -14,7 +14,7 @@
     <div id="header">
         <div id="head">
             <div id="logo">
-                <img src="images/logo.png" alt="">
+                <img src="/static/images/logo.png" alt="">
             </div>
             <div id="uname" onclick="company()">深圳市模板电子科技有限公司</div>
             <a id="admin" onclick="admin()">后台管理</a>
@@ -37,22 +37,22 @@
     <div id="login_box">
         <div id="login">
            <div id="logPic">
-               <img src="images/logPic.jpg" alt=""/>
+               <img src="/static/images/logPic.jpg" alt=""/>
            </div>
-            <form id="logForm" name="logForm" method="post" action="">
+            <form id="logForm" name="logForm" method="post" action="/user/login">
                 <table width="100%" border="0" cellspacing="0" cellpadding="15">
                     <tr>
                         <td width="120" height="80" align="right">用户名：</td>
-                        <td><input name="unsename" type="text" size="18" /></td>
+                        <td><input name="nickname" type="text" size="18" /></td>
                     </tr>
                     <tr>
                         <td height="80" align="right">密码：</td>
-                        <td><input name="passWord" type="password" size="18"/></td>
+                        <td><input name="pwd" type="password" size="18"/></td>
                     </tr>
                     <tr>
                         <td height="80" align="right">&nbsp;</td>
                         <td>
-                            <a  type="submit" value="登陆" onclick="user()">&nbsp;登陆&nbsp;</a>
+                            <button  type="submit" >&nbsp;登陆&nbsp;</button>
                            <a   id="forget" >忘记密码？</a>
                             <a id="registBtn" onclick="regist()" >免费注册</a>
                     </tr>

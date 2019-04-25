@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>唯群网--报价</title>
-    <link rel="stylesheet" href="css/public.css">
-    <link rel="stylesheet" href="css/quote.css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script charset="gb2312" type="text/javascript" src="js/public.js"></script>
-    <script charset="gb2312" type="text/javascript" src="js/quote.js"></script>
+    <link rel="stylesheet" href="/static/css/public.css">
+    <link rel="stylesheet" href="/static/css/quote.css">
+    <script src="/static/js/jquery-3.2.1.js"></script>
+    <script charset="gb2312" type="text/javascript" src="/static/js/public.js"></script>
+    <script charset="gb2312" type="text/javascript" src="/static/js/quote.js"></script>
  </head>
 
 <body>
 
 	<div class="box">
-        <div id="head">
+        <div id="head" >
             <div id="logo">
-                <img src="images/logo.png" alt="">
+                <img src="/static/images/logo.png" alt="">
             </div>
             <div id="uname" onclick="company()">深圳市模板电子科技有限公司</div>
             <a id="admin" onclick="admin()">后台管理</a>
@@ -48,14 +49,14 @@
                     <th>要求货期</th>
                 </tr>
                 <tr>
-                    <td>I8090600001</td>
-                    <td>深圳市模板测试电子有限公司</td>
-                    <td>STM8S903K3T6CTR</td>
-                    <td>原装正品</td>
-                    <td> 2018+</td>
-                    <td>56850</td>
-                    <td>102.56</td>
-                    <td>深圳现货</td>
+                    <td th:value="${rfq.rfqno}">I8090600001</td>
+                    <td th:text="${rfq.company}">深圳市模板测试电子有限公司</td>
+                    <td th:text="${rfq.pn}">STM8S903K3T6CTR</td>
+                    <td th:text="${rfq.qlty}">原装正品</td>
+                    <td th:value="${rfq.qty}" > 2018+</td>
+                    <td th:value="${rfq.qty}" >56850</td>
+                    <td th:value="${rfq.tp}">102.56</td>
+                    <td th:value="${rfq.dtime}">深圳现货</td>
                 </tr>
             </table>
             <div id="fillQuote">
@@ -63,7 +64,7 @@
                     <table>
                         <tr><th>填写报价单：</th></tr>
                         <tr>
-                            <td><input class="pnL"  type="text" placeholder="请输入型号" /></td>
+                            <td><input class="pnL"  type="text" placeholder="询价单号"  /></td>
                             <td>
                                 <select class="qltyL" type="text" id="ptypeList">
                                     <option value="原厂代理">原厂代理</option>
@@ -75,7 +76,7 @@
                             <td><input class="dtcdL" type="text" placeholder="批次"  /></td>
                             <td><input class="qtyL" type="text" placeholder="数量" /></td>
                             <td><input class="priceL" type="text" placeholder="单价" /></td>
-                            <td><input class="dtimeL" type="text" placeholder="货期" /></td>
+                            <td><input class="dtimeL" type="text" placeholder="货期"  /></td>
                             <td><input type="submit" value="提交报价"/>
                             </td>
                         </tr>

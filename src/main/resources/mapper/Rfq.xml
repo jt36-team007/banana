@@ -1,0 +1,27 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uiqun.dao.RfqDao">
+    <select id="queryRfqList" resultType="Rfq">
+        select rfqno,company,pn,mfg,qty,qlty,tp,dtime,sure,rdate,isOpen
+        from  rfqlist
+        <where>
+            <if test="condition.rfqno!=null and condition.rfqno!=''">
+                and rfqno=#{condition.rfqno}
+            </if>
+            <!--<if test="pn>0">-->
+                <!--and rfqno=#{rfqno}-->
+            <!--</if>-->
+        </where>
+        limit #{pageOffset},#{pageSize}
+    </select>
+    <select id="queryRfqRows" resultType="_int">
+        select count(1)
+        from  rfqlist
+        <where>
+            <if test="condition.rfqno!=null and condition.rfqno!=''">
+                and rfqno=#{condition.rfqno}
+            </if>
+        </where>
+    </select>
+</mapper>

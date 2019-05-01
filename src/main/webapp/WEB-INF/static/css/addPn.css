@@ -5,13 +5,24 @@
 }
 #addPn{
     margin:0 auto;
-    width:1226px;
+    width:1000px;
     height:auto;
     font-size:24px;
 }
 #addForm{
     margin-top: 30px;
     margin-left:200px;
+}
+.pnSave{
+    width:100px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 35px;
+    margin-left:100px;
+    margin-bottom: 50px;
+}
+.pnSave:hover{
+    color: #FF0000;
 }
 input{
     font-size:24px;

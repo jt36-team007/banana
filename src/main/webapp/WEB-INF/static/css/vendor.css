@@ -50,6 +50,15 @@ ul{
 ul li{
     padding: 10px 30px;
 }
+
+ul li span{
+    font-size: 20px;
+}
+
+ol{
+    display: none;
+    list-style: none;
+}
 #detail{
     float: left;
     width: 600px;

@@ -38,33 +38,35 @@
     <div id="regist1_box">
         <div id="regist1">
               <form id="registForm" name="registForm" method="post" action="">
-                    <dl>
-                        <dd>用户名：<input id="username" type="text" size="18"/></dd>
-                    </dl>
-                    <dl>
-                        <td>密 &nbsp 码：<input id="passWord" type="password" size="18"/></td>
-                    </dl>
-                    <dl>
-                        <dd>手 &nbsp 机：<input id="handPhone" type="text" size="18"/> <span>发送验证码</span></dd>
-                    </dl>
-                    <dl>
-                        <dd>验证码：<input id="veriCode" type="text" size="18"/></dd>
-                    </dl>
-                  <dl>
-                        <dd height="40" align="center">《唯群网服务条款》</dd>
-                  </dl>
-                    <dl>
-                        <dd><textarea id="userLaw" cols="10" rows="8">唯群网要求客户遵守国家的相关网络管理法规。不传播色情、不造谣，不传谣。</textarea> </dd>
-                    </dl>
-                    <dl>
-                        <dd>
-                            <input name="isAgree" type="radio" value="1"/>同意
-                            <input name="isAgree" type="radio" value="0"  checked="checked"/>不同意
-                        </dd>
-                  </dl>
-                    <dl>
-                        <td><input class="button" type="submit" name="regist" value="提交注册"/> </td>
-                    </dl>
+                  <table>
+                        <tr>
+                            <td>用户名：<input id="username" type="text" size="18" required/><span id="user_prompt">用户名由英文字母和数字组成的4-16位字符，以字母开头</span></td>
+                        </tr>
+                        <tr>
+                            <td>密 &nbsp 码：<input id="passWord" type="password" size="18" required/><span id="pwd_prompt">密码由英文字母和数字组成的4-10位字符</span></td>
+                        </tr>
+                        <tr>
+                            <td>手 &nbsp 机：<input id="handPhone" type="text" size="18" required/> <span>发送验证码</span><span id="mobile_prompt"></span></td>
+                        </tr>
+                        <tr>
+                            <td>验证码：<input id="veriCode" type="text" size="18"/></td>
+                        </tr>
+                      <tr>
+                            <td height="40" align="center">《唯群网服务条款》</td>
+                      </tr>
+                        <tr>
+                            <td><textarea id="userLaw" cols="10" rows="8">唯群网要求客户遵守国家的相关网络管理法规。不传播色情、不造谣，不传谣。</textarea> </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="isAgree" type="radio" value="1"/>同意
+                                <input name="isAgree" type="radio" value="0"  checked="checked"/>不同意
+                            </td>
+                      </tr>
+                        <tr>
+                            <td><input class="button" type="submit" name="regist" value="提交注册"/> </td>
+                        </tr>
+                  </table>
             </form>
         </div>
     </div>

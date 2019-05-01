@@ -4,7 +4,7 @@
 }
 #regist1{
 	margin: 0 auto;
-	width:1226px;
+	width:1000px;
 	height: 800px;
 }
 #logPic{
@@ -20,6 +20,22 @@
 #registForm input{
     font-size: 24px;
 }
+
+#user_prompt{
+	color: #FF0000;
+	font-size: 16px;
+}
+
+#pwd_prompt{
+	color: #FF0000;
+	font-size: 16px;
+}
+
+#mobile_prompt{
+	color: #FF0000;
+	font-size: 16px;
+}
+
 #userLaw{
 	border: 1px solid #333333;
 	width:850px;

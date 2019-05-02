@@ -6,18 +6,18 @@ import java.util.Date;
 
 public class Rfq implements Serializable {
 
-  private String rfqno;
-  private String company;
-  private String pn;
-  private String mfg;
-  private Integer qty;
-  private String qlty;
-  private Double tp;
-  private String dtime;
-  private String sure;
-  private Date rdate;
-  private String isOpen;
-
+  private String rfqno; //询价单号
+  private String company; //公司名称
+  private String pn; //型号
+  private String mfg; //品牌
+  private Integer qty; //数量
+  private String qlty; //质量标准
+  private Double tp; //目标价格
+  private String dtime; //交货时间
+  private String sure; //是否实单
+  private Date rdate; //报价日期
+  private String isOpen; //是否公开
+  private int uid; //发布者
 
   public String getRfqno() {
     return rfqno;
@@ -105,5 +105,13 @@ public class Rfq implements Serializable {
 
   public void setIsOpen(String isOpen) {
     this.isOpen = isOpen;
+  }
+
+  public int getUid() {
+    return uid;
+  }
+
+  public void setUid(int uid) {
+    this.uid = uid;
   }
 }

@@ -3,29 +3,30 @@ package com.uiqun.model;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private Integer uid;
-    private String nickname;
-    private String mobile;
-    private String pwd;
-    private String company;
-    private String area;
-    private Integer utype;
-    private String contact;
-    private String title;
-    private String tel;
-    private String qq;
-    private String wechat;
-    private String hobby;
-    private String email;
-    private String addr;
-    private String website;
-    private String business;
-    private String profile;
-    private String ulogo;
-    private String image;
-    private String certid;
-    private String cert;
-    private String iscert;
+    private Integer uid; //用户编号
+    private String nickname; //用户名
+    private String mobile; //手机
+    private String pwd; //密码
+    private String company; //公司名称
+    private String area; //区域
+    private Integer utype; //用户类型
+    private String contact; //联系人
+    private String title; //职位
+    private String tel; //电话
+    private String qq; //QQ号码
+    private String wechat; //微信号
+    private String hobby; //爱好
+    private String email; //邮箱
+    private String addr; //地址
+    private String website; //网址
+    private String business; //主营业务
+    private String profile; //公司简介
+    private String ulogo; //公司商标
+    private String image; //宣传图片
+    private String certid; //营业执照号码
+    private String cert; //营业执照
+    private String iscert; //是否通过认证
+    private int sid; //服务编号
 
     public Integer getUid() {
         return uid;
@@ -209,5 +210,13 @@ public class User implements Serializable {
 
     public void setIscert(String iscert) {
         this.iscert = iscert;
+    }
+
+    public int getSid() {
+        return sid;
+    }
+
+    public void setSid(int sid) {
+        this.sid = sid;
     }
 }

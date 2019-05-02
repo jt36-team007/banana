@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uiqun.dao.VendorDao">
+    <select id="queryVendor" resultType="Vendor">
+        select * from vendorlist
+        <where>
+            <if test="co!='' and co!=null">
+                and co = #{co}
+            </if>
+            <if test="flevel!='' and flevel!=null">
+                and flevel = #{flevel}
+            </if>
+            <if test="slevel!='' and slevel!=null">
+                and slevel = #{slevel}
+            </if>
+        </where>
+    </select>
+
+</mapper>

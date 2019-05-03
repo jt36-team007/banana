@@ -57,7 +57,7 @@
     <mvc:resources location="/WEB-INF/static/css/" mapping="/static/css/**"/>
     <mvc:resources location="/WEB-INF/static/images/" mapping="/static/images/**"/>
     <mvc:resources location="/WEB-INF/static/js/" mapping="/static/js/**"/>
-
+    <mvc:resources location="/upfilelogin/" mapping="/upfilelogin/**"/>
 
     <!--配置MultipartResolver,用于文件上传-->
     <bean id="multipartResolver"
@@ -67,13 +67,14 @@
     </bean>
 
 
-    <!--&lt;!&ndash;用户拦截器配置&ndash;&gt;-->
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/sys/*"/>-->
-            <!--<bean class="com.accp.interceptor.MyInterceptor" />-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <!--&lt;!&ndash;拦截器配置&ndash;&gt;-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <mvc:exclude-mapping path="/index"/>
+            <bean class="com.uiqun.filter.UiQunFilter" />
+        </mvc:interceptor>
+    </mvc:interceptors>
 
     <!--&lt;!&ndash;管理员拦截器配置&ndash;&gt;-->
     <!--<mvc:interceptors>-->

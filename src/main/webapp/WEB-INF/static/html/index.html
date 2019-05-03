@@ -52,18 +52,19 @@
 <div class="box">
     <div id="search">
 
-        <form  id="form">
+        <form  id="form" action="/index" method="post">
             <table>
                 <tr>
                     <td>
-                        <select  id="ptypeList" >
-                            <option value="I集成电路" selected="selected">I 集成电路</option>
-                            <option value="T三极管">T 三极管</option>
-                            <option value="D二极管">D 二极管</option>
-                            <option value="C电容">C 电容</option>
+                        <select name="pntype" id="ptypeList" >
+                            <option value="0">全部</option>
+                            <span  th:each="pl :${pntypeList}">
+                                <option th:if="${pl.id==pntype}" selected="selected" th:value="${pl.id}" th:text="${pl.name}">I 集成电路</option>
+                                <option th:if="${pl.id!=pntype}" th:value="${pl.id}" th:text="${pl.name}">I 集成电路</option>
+                            </span>
                         </select>
                     </td>
-                    <td><input type="search" id="pnInput"  placeholder="请输入查询型号"/></td>
+                    <td><input type="search" id="pnInput" name="pn" th:value="${pn}"  placeholder="请输入查询型号"/></td>
                     <td><input id="searchBtn" type="submit" value="搜索"/></td>
                 </tr>
             </table>
@@ -91,7 +92,7 @@
                     <td th:text="${Rfq.rfqno}">I890600001</td>
                     <td th:text="${Rfq.company}">深圳市模板电子科技有限公司</td>
                     <td th:text="${Rfq.pn}">STM8S003F3P6TR</td>
-                    <td th:text="${Rfq.qlty}">原装正品</td>
+                    <td th:text="${qltytypeList[Rfq.qlty-1].name}">原装正品</td>
                     <td th:text="${Rfq.qty}+'+'">1830+</td>
                     <td th:text="${Rfq.qty}">500000</td>
                     <td th:text="${Rfq.tp}">11.2563</td>

@@ -12,6 +12,11 @@
 
 <body>
 <input type="hidden" id="AlertMessage" th:value="${AlertMessage}">
+<script>
+    if(document.getElementById("AlertMessage").value!=null){
+        alert(document.getElementById("AlertMessage").value)
+    }
+</script>
 <div id="header">
     <div id="head">
         <div id="logo">

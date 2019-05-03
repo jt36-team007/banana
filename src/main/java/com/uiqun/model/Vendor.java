@@ -1,14 +1,14 @@
 package com.uiqun.model;
 
 public class Vendor {
-    private int vid;
-    private int uid;
-    private String co;
-    private String flevel;
-    private String slevel;
-    private String tlevel;
-    private String website1;
-    private String website2;
+    private int vid;//供应商id
+    private int uid;//用户id
+    private String co;//公司名称
+    private String flevel;//一级分类
+    private String slevel;//二级分类
+    private String tlevel;//三级分类
+    private String website1;//链接地址1
+    private String website2;//链接地址2
 
     public int getVid() {
         return vid;

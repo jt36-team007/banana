@@ -6,12 +6,12 @@ import java.util.Date;
 
 public class Rfq implements Serializable {
 
-  private String rfqno; //询价单号
+  private int rfqno; //询价单号
   private String company; //公司名称
   private String pn; //型号
   private String mfg; //品牌
   private Integer qty; //数量
-  private String qlty; //质量标准
+  private int qlty; //质量标准
   private Double tp; //目标价格
   private String dtime; //交货时间
   private String sure; //是否实单
@@ -19,11 +19,11 @@ public class Rfq implements Serializable {
   private String isOpen; //是否公开
   private int uid; //发布者
 
-  public String getRfqno() {
+  public int getRfqno() {
     return rfqno;
   }
 
-  public void setRfqno(String rfqno) {
+  public void setRfqno(int rfqno) {
     this.rfqno = rfqno;
   }
 
@@ -59,11 +59,11 @@ public class Rfq implements Serializable {
     this.qty = qty;
   }
 
-  public String getQlty() {
+  public int getQlty() {
     return qlty;
   }
 
-  public void setQlty(String qlty) {
+  public void setQlty(int qlty) {
     this.qlty = qlty;
   }
 

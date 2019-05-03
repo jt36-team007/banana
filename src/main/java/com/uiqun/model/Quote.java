@@ -4,12 +4,13 @@ import java.util.Date;
 
 public class Quote {
     private int qotno; //报价单号
+    private int rfqno; //询价单号
     private String company; //公司名称
     private String pn; //型号
     private String mfg; //品牌
     private int qty; //数量
     private String dtcd; //批次
-    private String qlty; //质量标准
+    private int qlty; //质量标准
     private float price; //单价
     private String dtime; //交货日期
     private int sure; //是否实价
@@ -23,6 +24,14 @@ public class Quote {
 
     public void setQotno(int qotno) {
         this.qotno = qotno;
+    }
+
+    public int getRfqno() {
+        return rfqno;
+    }
+
+    public void setRfqno(int rfqno) {
+        this.rfqno = rfqno;
     }
 
     public String getCompany() {
@@ -65,11 +74,11 @@ public class Quote {
         this.dtcd = dtcd;
     }
 
-    public String getQlty() {
+    public int getQlty() {
         return qlty;
     }
 
-    public void setQlty(String qlty) {
+    public void setQlty(int qlty) {
         this.qlty = qlty;
     }
 

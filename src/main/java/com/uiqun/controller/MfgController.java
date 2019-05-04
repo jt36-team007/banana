@@ -26,6 +26,7 @@ public class MfgController {
     //新增品牌
     @RequestMapping("/addmfg")
     public String addMfg(Model model, Mfg mfg, MultipartFile upload, HttpSession session){
+        boolean flag =false;
         if(upload!=null){
             //图片上传
             StringBuilder stringBuilder = new StringBuilder(upload.getName());
@@ -39,14 +40,18 @@ public class MfgController {
                 String upfilelogin = session.getServletContext().getRealPath("upfilelogin");
                 //保存路径&保存文件名
                 upload.transferTo(new File(upfilelogin,filename));
-            //添加到数据库
-                mfgService.addMfg(mfg);
+                flag=true;
                 //返回消息
                 model.addAttribute("AlertMessage","添加品牌成功");
             } catch (IOException e) {
-                model.addAttribute("AlertMessage","添加品牌失败");
                 e.printStackTrace();
             }
+        }else if(mfg.getEname()==null||mfg.getCname()==null){
+            model.addAttribute("AlertMessage","添加品牌失败,必须填写中文或者英文");
+        }
+        if(flag){
+            //添加到数据库
+            mfgService.addMfg(mfg);
         }
         return "forward:/insertmfg";
     }

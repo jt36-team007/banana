@@ -1,0 +1,19 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uiqun.dao.PnDao">
+    <!--<insert id="insertPns">-->
+        <!--INSERT INTO `pnlist`(ptype,pn,des,mfg,pkge,pack,mpq,price,spec,datalink)-->
+          <!--VALUES-->
+
+          <!--<foreach collection="list" item="outList" separator="," close=";">-->
+              <!--<foreach collection="outList" item="intList" open="(null," close=")" separator="," >-->
+                <!---->
+              <!--</foreach>-->
+          <!--</foreach>-->
+          <!--(-->
+
+          <!--(SELECT id FROM `pntype` WHERE `name` LIKE '%集成电路'),-->
+            <!--'STM8S003F3P6','MCU 8Bit 256K','ST','TSSOP20','Reel',2500,1.1,'MCU 8Bit 256K,电流1A，电压12V','https://sae/link')-->
+    <!--</insert>-->
+</mapper>

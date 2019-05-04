@@ -8,6 +8,7 @@ public class User implements Serializable {
     private String mobile; //手机
     private String pwd; //密码
     private String company; //公司名称
+    private String co; //公司简称
     private String area; //区域
     private Integer utype; //用户类型
     private String contact; //联系人
@@ -19,6 +20,7 @@ public class User implements Serializable {
     private String email; //邮箱
     private String addr; //地址
     private String website; //网址
+    private String website1; //站内网址
     private String business; //主营业务
     private String profile; //公司简介
     private String ulogo; //公司商标
@@ -66,6 +68,14 @@ public class User implements Serializable {
 
     public void setCompany(String company) {
         this.company = company;
+    }
+
+    public String getCo() {
+        return co;
+    }
+
+    public void setCo(String co) {
+        this.co = co;
     }
 
     public String getArea() {
@@ -154,6 +164,14 @@ public class User implements Serializable {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public String getWebsite1() {
+        return website1;
+    }
+
+    public void setWebsite1(String website1) {
+        this.website1 = website1;
     }
 
     public String getBusiness() {

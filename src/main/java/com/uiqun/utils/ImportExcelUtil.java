@@ -7,10 +7,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -53,6 +50,9 @@ public class ImportExcelUtil {
                 //遍历所有的列
                 List<Object> li = new ArrayList<Object>();
                 for (int y = row.getFirstCellNum(); y < row.getLastCellNum(); y++) {
+                    if("".equals(row.getCell(y))||row.getCell(y)==null){
+                        row.getCell(y).setCellValue(" ");
+                    }
                     cell = row.getCell(y);
                     li.add(getCellValue(cell));
                 }
@@ -112,18 +112,18 @@ public class ImportExcelUtil {
     }
 
 
-    @Test
-    public void getBankListByExcel() throws Exception {
-        String filepath = "C:\\型号上传样板.xlsx";
-        File file = new File(filepath);
-        FileInputStream inputStream = new FileInputStream(new File(filepath));
-        List<List<Object>> list = ImportExcelUtil.getBankListByExcel(inputStream, filepath);
-        System.out.print(list);
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = 0; j < list.get(i).size(); j++) {
-                System.out.println(list.get(i).get(j) + "::" + j);
-            }
-        }
-    }
+//    @Test
+//    public void getBankListByExcel() throws Exception {
+//        String filepath = "C:\\型号上传样板.xlsx";
+//        File file = new File(filepath);
+//        FileInputStream inputStream = new FileInputStream(new File(filepath));
+//        List<List<Object>> list = ImportExcelUtil.getBankListByExcel(inputStream, filepath);
+//        System.out.print(list);
+//        for (int i = 0; i < list.size(); i++) {
+//            for (int j = 0; j < list.get(i).size(); j++) {
+//                System.out.println(list.get(i).get(j) + "::" + j);
+//            }
+//        }
+//    }
 
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="css/public.css"    />
@@ -11,6 +11,13 @@
 </head>
 
 <body>
+<input type="hidden" id="AlertMessage" th:value="${AlertMessage}">
+<script>
+    var AlertMessage = document.getElementById("AlertMessage").value;
+    if(AlertMessage!=null&&AlertMessage!=''){
+        alert(AlertMessage);
+    }
+</script>
     <div>
         <form action="toUpdatePn">
             <table id="pn" cellspacing="10px">
@@ -94,18 +101,15 @@
         </form>
     </div>
     <div>
-        <form action="uploadPn">
+        <form action="/importExcle" method="post" enctype="multipart/form-data">
             <table id="upload" cellspacing="10px">
                 <tr><th>批量上传型号列表</th></tr>
                 <tr><td>
-                    <input type="file"/>
-                </td></tr>
-                <tr>
-                    <td><input type="radio" value="新增"/>新增<input type="radio" value="修改"/>修改</td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="提交"/></td>
-                </tr>
+                    <input type="file" name="upload"/>
+                </td><td><input type="submit" value="提交"/></td></tr>
+                <!--<tr>-->
+                    <!--<td><input type="radio" value="新增"/>新增<input type="radio" value="修改"/>修改</td>-->
+                <!--</tr>-->
             </table>
         </form>
     </div>

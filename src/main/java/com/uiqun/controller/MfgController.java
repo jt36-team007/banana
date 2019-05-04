@@ -1,7 +1,6 @@
 package com.uiqun.controller;
 
 import com.uiqun.model.Mfg;
-import com.uiqun.model.User;
 import com.uiqun.service.MfgService;
 import com.uiqun.utils.Encrypt_Dncrypt;
 import org.springframework.stereotype.Controller;
@@ -29,12 +28,8 @@ public class MfgController {
         boolean flag =false;
         if(upload!=null){
             //图片上传
-            StringBuilder stringBuilder = new StringBuilder(upload.getName());
-            User u = (User)session.getAttribute("user");
-            stringBuilder.append(u.getUid());
-            String MD5_upload = Encrypt_Dncrypt.getMD5(stringBuilder.toString().getBytes());
-            String ofn = upload.getOriginalFilename();
-            String filename=MD5_upload+ofn.substring(ofn.lastIndexOf("."),ofn.length());
+            //获取用户上传的Logo的文件名
+            String filename = Encrypt_Dncrypt.getUpLoadFileName(session,upload,"logo");
             mfg.setMlogo(filename);
             try {
                 String upfilelogin = session.getServletContext().getRealPath("upfilelogin");

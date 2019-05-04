@@ -1,5 +1,9 @@
 package com.uiqun.utils;
 
+import com.uiqun.model.User;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpSession;
 import java.security.NoSuchAlgorithmException;
 
 public abstract class Encrypt_Dncrypt {
@@ -29,5 +33,25 @@ public abstract class Encrypt_Dncrypt {
                 e.printStackTrace();
             }
             return s;
+        }
+
+    /**
+     * 获取用户上传文件修改后的文件名
+     * @param session 用户回话
+     * @param upload  上传的文件
+     * @param modelName 所需的上传操作的(例如:上传logo,modelName填写logo)
+     * @return
+     */
+        public static String getUpLoadFileName(HttpSession session, MultipartFile upload,String modelName){
+            StringBuilder stringBuilder = new StringBuilder(upload.getName());
+            User u = (User)session.getAttribute("user");
+            if(u != null) {
+                stringBuilder.append(u.getUid());
+                stringBuilder.append(modelName);
+                String MD5_upload = Encrypt_Dncrypt.getMD5(stringBuilder.toString().getBytes());
+                String ofn = upload.getOriginalFilename();
+                return MD5_upload + ofn.substring(ofn.lastIndexOf("."), ofn.length());
+            }
+            return null;
         }
 }

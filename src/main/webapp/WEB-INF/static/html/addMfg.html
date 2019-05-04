@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>唯群网--添加品牌</title>
@@ -11,12 +10,7 @@
 </head>
 
 <body>
-<input type="hidden" id="AlertMessage" th:value="${AlertMessage}">
-<script>
-    if(document.getElementById("AlertMessage").value!=null&&document.getElementById("AlertMessage").value!=''){
-        alert(document.getElementById("AlertMessage").value)
-    }
-</script>
+
 <div id="header">
     <div id="head">
         <div id="logo">
@@ -42,15 +36,15 @@
 
 <div id="addMfg_box">
     <div id="addMfg">
-        <form id="addForm" action="/addmfg" method="post" enctype="multipart/form-data"  name="addForm">===============添加品牌===============
+        <form id="addForm" action="" method="post" name="addForm">===============添加品牌===============
             <dl>
                 <dd>上传LOGO： <input  type="file"  name="upload" id="upload"/></dd>
-                <dd>英文名称：<input  name="ename" type="text" required/></dd>
-                <dd>中文名称：<input  name="cname" type="text" required/></dd>
-                <dd>产品分类：<input  name="product" type="text" /></dd>
-                <dd>公司简介：<input  name="mprofile" type="text" /></dd>
-                <dd>公司国籍：<input  name="country" type="text" /></dd>
-                <dd>公司网址：<input  name="website" type="text" /></dd>
+                <dd>英文名称：<input   type="text" required/></dd>
+                <dd>中文名称：<input  type="text" required/></dd>
+                <dd>产品分类：<input  type="text" /></dd>
+                <dd>公司简介：<input  type="text" /></dd>
+                <dd>公司国籍：<input type="text" /></dd>
+                <dd>公司网址：<input type="text" /></dd>
                 <dd><button class="mfgSave">保存</button></dd>
             </dl>
         </form>

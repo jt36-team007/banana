@@ -1,7 +1,7 @@
 
 #title{
     margin: 0 auto;
-    width: 1226px;
+    width: 1000px;
 }
 #title span{
     font-size: 32px;
@@ -13,7 +13,7 @@
 }
 #comInfo{
 	margin:0 auto;
-    width:1226px;
+    width:1000px;
     font-size: 20px;
 }
 #comInfo form{
@@ -32,7 +32,7 @@
 }
 #h2{
     margin: 0 auto;
-    width: 1226px;
+    width: 1000px;
     height: 60px;
     border-bottom: 2px solid #FF0000;
 }
@@ -50,6 +50,6 @@ ul li{
 }
 #hotStk{
     margin:0 auto;
-    width: 1226px;
+    width: 1000px;
     height: 800px;
 }

@@ -41,7 +41,7 @@ public class MfgController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else if(mfg.getEname()==null||mfg.getCname()==null){
+        }else if(mfg.getMfgName()==null){
             model.addAttribute("AlertMessage","添加品牌失败,必须填写中文或者英文");
         }
         if(flag){

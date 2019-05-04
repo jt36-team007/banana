@@ -2,7 +2,7 @@ package com.uiqun.controller;
 
 import com.uiqun.service.PnService;
 import com.uiqun.utils.Encrypt_Dncrypt;
-import com.uiqun.utils.ImportExcelUtil;
+import com.uiqun.utils.ExcelUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,7 +47,7 @@ public class PnController {
             }
             String filepath = upfilelogin;
             FileInputStream inputStream = new FileInputStream(new File(filepath));
-            List<List<Object>> list = ImportExcelUtil.getBankListByExcel(inputStream, filepath);
+            List<List<Object>> list = ExcelUtil.getBankListByExcel(inputStream, filepath);
             //添加到数据库
             pnService.insertPns(list);
             //删除以添加到数据库中的文件

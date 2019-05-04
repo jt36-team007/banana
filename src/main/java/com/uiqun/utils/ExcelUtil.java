@@ -8,13 +8,15 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImportExcelUtil {
+public class ExcelUtil {
     private final static String excel2003L = ".xls";    //2003- 版本的excel
     private final static String excel2007U = ".xlsx";   //2007+ 版本的excel
 
@@ -111,19 +113,17 @@ public class ImportExcelUtil {
         return value;
     }
 
-
-//    @Test
-//    public void getBankListByExcel() throws Exception {
-//        String filepath = "C:\\型号上传样板.xlsx";
-//        File file = new File(filepath);
-//        FileInputStream inputStream = new FileInputStream(new File(filepath));
-//        List<List<Object>> list = ImportExcelUtil.getBankListByExcel(inputStream, filepath);
-//        System.out.print(list);
-//        for (int i = 0; i < list.size(); i++) {
-//            for (int j = 0; j < list.get(i).size(); j++) {
-//                System.out.println(list.get(i).get(j) + "::" + j);
-//            }
-//        }
-//    }
-
+    public static void main(String[] args) throws IOException {
+        Workbook wk=new HSSFWorkbook();//创建一个工作薄
+        Sheet sh=wk.createSheet("第一个sheet页");//创建一个sheet页
+        Row row=sh.createRow(0);//创建第一行
+        Cell cell=row.createCell(0);//创建第一行的第一个单元格
+        cell.setCellValue(1);//为第一行第一个单元格塞值
+        row.createCell(1).setCellValue(1.2);//创建第一行第2个单元格并赋值
+        row.createCell(2).setCellValue("这是一个字符串");//创建第一行第3个单元格并赋值
+        row.createCell(3).setCellValue(true);//创建第一行第4个单元格并赋值
+        FileOutputStream out= new FileOutputStream("D:\\用Poi搞出来的cells和sheet页.xls");
+        wk.write(out);
+        out.close();
+    }
 }

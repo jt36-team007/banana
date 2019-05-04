@@ -2,8 +2,7 @@ package com.uiqun.model;
 
 public class Mfg {
     private int mid; //品牌编号
-    private String ename; //英文名称
-    private String cname; //中文名称
+    private String mfgName; //品牌名称
     private String mlogo; //品牌商标
     private String product; //生产产品
     private String mprofile; //公司简介
@@ -18,20 +17,12 @@ public class Mfg {
         this.mid = mid;
     }
 
-    public String getEname() {
-        return ename;
+    public String getMfgName() {
+        return mfgName;
     }
 
-    public void setEname(String ename) {
-        this.ename = ename;
-    }
-
-    public String getCname() {
-        return cname;
-    }
-
-    public void setCname(String cname) {
-        this.cname = cname;
+    public void setMfgName(String mfgName) {
+        this.mfgName = mfgName;
     }
 
     public String getMlogo() {

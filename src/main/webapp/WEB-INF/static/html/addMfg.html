@@ -13,7 +13,7 @@
 <body>
 <input type="hidden" id="AlertMessage" th:value="${AlertMessage}">
 <script>
-    if(document.getElementById("AlertMessage").value!=null){
+    if(document.getElementById("AlertMessage").value!=null&&document.getElementById("AlertMessage").value!=''){
         alert(document.getElementById("AlertMessage").value)
     }
 </script>
